@@ -1,0 +1,45 @@
+{{#section "head"}}
+  <link rel="stylesheet" href="/css/register.css" type="text/css" />
+{{/section}}
+<div class="conteiner">
+  <main>
+    <form action="/users/register" method="POST">
+      <label for="nombre">Ingrese nombre</label>
+      <input id="nombre" type="text" name="nombre" placeholder="nombre..."
+        autofocus value="{{formData.nombre}}"/>
+      <label for="apellido">Ingrese apellido</label>
+      <input id="apellido" type="text" name="apellido" placeholder="apellido..."
+        value="{{formData.nombre}}"/>
+      <label for="age">Fecha de nacimiento</label>
+      <input id="age" type="date" name="age" />
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" placeholder="email..."
+        value="{{formData.email}}" />
+      <label for="pass" class="form-label">Password</label>
+      <input  name="pass" type="password" id="pass"
+        autocomplete="current-password" />
+
+      <label for="bando">Elige tu bando</label>
+      <select name="bando" id="bando">
+        <option value="la-fuerza">La Fuerza</option>
+        <option value="lado-oscuro">Lado oscuro</option>
+        <option value="otro">Otros</option>
+      </select>
+      <div>
+        <input class="btn" type="submit" value="Crear cuenta" />
+        <a class="volver" href="/users/login">Volver a login</a>
+      </div>
+      <div class="registrado">
+      {{message}}
+      </div>
+      <div>
+        {{#each arrWarnings}}
+          <p class="rules">
+            * Error en el campo "{{param}}" :
+            {{msg}}
+          </p>
+        {{/each}}
+      </div>
+    </form>
+  </main>
+</div>

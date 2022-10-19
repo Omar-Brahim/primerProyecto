@@ -1,0 +1,18 @@
+{{#section "head"}}
+  <link rel="stylesheet" href="/css/login.css" type="text/css" />
+{{/section}}
+<section class="conteiner">
+  <div class="main">
+  <form action="/users/login" method="POST">
+    <label for="user">Email</label>
+    <input type="text" name="email" id="email" placeholder="email..." autofocus/>
+    <label for="pass">Password</label>
+    <input name="pass" type="password" id="pass" autocomplete="current-password">
+    <div >
+        <input type="submit"  value="Iniciar sesión" class="btn"/>
+        <p>¿No tienes una cuenta?</p>
+        <a href="/users/register" class="register">Registrate</a>
+      </div>
+  </form>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{{#section "head"}}
+  <link rel="stylesheet" href="/css/editRegister.css" type="text/css" />
+{{/section}}
+
+<h1>Información de cuenta:</h1>
+<div class="conteiner">
+  <form action="/users/settings" method="POST">
+    <div>
+      <label for="name">Nombre</label>
+      <input name="name" type="text" id="name" autocomplete="name" value="{{user.name}}"/>
+    </div>
+    <div>
+      <label for="lastName">Apellido</label>
+      <input name="lastName" type="text" id="lastName" autocomplete="additional-name" value="{{user.lastName}}"/>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input name="email" type="text" id="email" autocomplete="email" value="{{user.email}}"/>
+    </div>
+    <div>
+      <input type="submit" value="Confirmar cambios" class="btn"/>
+      <a href="/users/delete" type="button" class="btn">Eliminar</a>
+      <a href="/" class="btn">Cancelar cambios</a>
+    </div>
+  </form>
+</div>

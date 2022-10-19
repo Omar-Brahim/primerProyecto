@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+.conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+a{
+    background-color:rgb(39, 38, 38);
+    margin: 10px;
+    color: yellow
+}
